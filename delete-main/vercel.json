@@ -8,10 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
       "src": "/services",
       "dest": "/services.html"
     },
@@ -32,7 +28,27 @@
       "dest": "/rating.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/services.html",
+      "dest": "/services.html"
+    },
+    {
+      "src": "/about.html",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/contact.html",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/help.html",
+      "dest": "/help.html"
+    },
+    {
+      "src": "/rating.html",
+      "dest": "/rating.html"
+    },
+    {
+      "src": "/",
       "dest": "/index.html"
     }
   ]
