@@ -2,14 +2,12 @@
   "name": "sungroupscontractor",
   "version": "1.0.0",
   "description": "Professional construction and contracting services website",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
+    "start": "echo \"Static site - no server needed\"",
+    "dev": "echo \"Static site - no server needed\"",
+    "build": "echo \"Static site build complete\""
   },
   "keywords": [
     "construction",
