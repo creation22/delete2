@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sungroupscontractor | Professional Construction Services</title>
+    <meta name="description" content="Professional construction and contracting services including epoxy flooring, electrical, plumbing, and more across India.">
+    <meta name="keywords" content="construction contractor, epoxy flooring, electrical services, plumbing, boiler services, aluminum work, property maintenance">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FBBF24',
+                        secondary: '#1F2937',
+                        accent: '#FDB813'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.7)), 
+                        url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .service-card:hover { transform: translateY(-8px); }
+        .btn-hover:hover { transform: scale(1.05); }
+        .fade-in { opacity: 0; transform: translateY(30px); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); transition: all 0.6s ease; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="Images/logo.png" alt="Sungroups Logo" class="h-10 w-10 rounded-full object-cover">
+                    <span class="text-xl font-bold text-secondary">Sungroupscontractor</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-secondary hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="services.html" class="text-secondary hover:text-primary transition-colors duration-300">Services</a>
+                    <a href="about.html" class="text-secondary hover:text-primary transition-colors duration-300">About</a>
+                    <a href="contact.html" class="text-secondary hover:text-primary transition-colors duration-300">Contact</a>
+                    <a href="help.html" class="text-secondary hover:text-primary transition-colors duration-300">Help</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-secondary hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-secondary hover:text-primary">Home</a>
+                    <a href="services.html" class="block px-3 py-2 text-secondary hover:text-primary">Services</a>
+                    <a href="about.html" class="block px-3 py-2 text-secondary hover:text-primary">About</a>
+                    <a href="contact.html" class="block px-3 py-2 text-secondary hover:text-primary">Contact</a>
+                    <a href="help.html" class="block px-3 py-2 text-secondary hover:text-primary">Help</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white">
+        <div class="text-center max-w-4xl mx-auto px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="block">Professional</span>
+                <span class="text-primary">Construction Services</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                Quality workmanship, reliable service, and customer satisfaction guaranteed
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-primary text-secondary px-8 py-4 rounded-full font-semibold text-lg btn-hover transition-all duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-calculator mr-2"></i>
+                    Get Free Quote
+                </a>
+                <a href="services.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg btn-hover transition-all duration-300 hover:bg-white hover:text-secondary inline-flex items-center justify-center">
+                    <i class="fas fa-tools mr-2"></i>
+                    Our Services
+                </a>
+            </div>
+            
+            <!-- Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+                <div class="flex items-center justify-center space-x-3" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-check-circle text-primary text-2xl"></i>
+                    <span class="text-lg">Licensed & Insured</span>
+                </div>
+                <div class="flex items-center justify-center space-x-3" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-clock text-primary text-2xl"></i>
+                    <span class="text-lg">24/7 Emergency Service</span>
+                </div>
+                <div class="flex items-center justify-center space-x-3" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-award text-primary text-2xl"></i>
+                    <span class="text-lg">Quality Guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive construction and maintenance solutions for residential, commercial, and industrial projects
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Epoxy Flooring -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-layer-group text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Epoxy Flooring</h3>
+                    <p class="text-gray-600 mb-6 text-center">Professional epoxy coating solutions for durable, attractive floors</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Metallic Epoxy Floors</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Self-Leveling Epoxy</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Industrial Coating</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Garage Coatings</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Epoxy%20Flooring" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Electrical Services -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bolt text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Electrical Services</h3>
+                    <p class="text-gray-600 mb-6 text-center">Expert electrical installation, repair, and maintenance services</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Residential Wiring</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Commercial Electrical</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Panel Upgrades</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Lighting Installation</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Electrical%20Services" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Plumbing Services -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-wrench text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Plumbing Services</h3>
+                    <p class="text-gray-600 mb-6 text-center">Complete plumbing solutions for all your water and drainage needs</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Pipe Installation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Leak Detection</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Bathroom Fittings</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Drain Cleaning</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Plumbing%20Services" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Boiler Services -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-fire text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Boiler Services</h3>
+                    <p class="text-gray-600 mb-6 text-center">Professional boiler installation, maintenance, and repair services</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Boiler Installation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Maintenance & Repair</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Safety Inspections</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Emergency Support</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Boiler%20Services" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Property Services -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-home text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Property Services</h3>
+                    <p class="text-gray-600 mb-6 text-center">Complete property maintenance and facility management solutions</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>General Repairs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Facility Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Renovation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Maintenance</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Property%20Services" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Aluminum Work -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-industry text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4 text-center">Aluminum Work</h3>
+                    <p class="text-gray-600 mb-6 text-center">Custom aluminum fabrication and installation services</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Doors & Windows</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>ACP Cladding</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Partitions</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Custom Fabrication</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor%20I%20want%20more%20details%20about%20Aluminum%20Work" 
+                           class="text-primary hover:text-accent font-semibold">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Our Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Showcasing our expertise through successful project completions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Commercial Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Commercial Complex</h3>
+                        <p class="text-gray-600">Complete electrical and epoxy flooring for 50,000 sq ft commercial space</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Industrial Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Industrial Facility</h3>
+                        <p class="text-gray-600">Heavy-duty epoxy flooring and electrical systems for manufacturing unit</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Residential Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Residential Villa</h3>
+                        <p class="text-gray-600">Complete home renovation including plumbing, electrical, and aluminum work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-6">About Sungroups</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Established in 2023, Sungroupscontractor has quickly become a trusted name in the construction industry, 
+                        delivering quality workmanship across residential, commercial, and industrial sectors.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Our team of certified professionals is committed to excellence, safety, and customer satisfaction. 
+                        We use the latest techniques and premium materials to ensure lasting results.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">50+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">40+</div>
+                            <div class="text-gray-600">Team Members</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">2+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">100%</div>
+                            <div class="text-gray-600">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                         alt="Construction Team" class="rounded-2xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to start your project? Contact us for a free consultation and quote
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-secondary mb-2">Phone</h3>
+                                <p class="text-gray-600">+91 9569678499</p>
+                                <p class="text-gray-600">+91 7518398529</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-secondary mb-2">Email</h3>
+                                <p class="text-gray-600">sungroupshelp@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-secondary mb-2">Address</h3>
+                                <p class="text-gray-600">Kauriya Kalan, Adalhat, Chunar, Mirzapur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-secondary mb-2">WhatsApp</h3>
+                                <a href="https://wa.me/919569678499?text=Hello%20Sungroupscontractor,%20I%20want%20to%20connect%20with%20you" 
+                                   target="_blank" 
+                                   class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold btn-hover transition-all duration-300 inline-flex items-center">
+                                    <i class="fab fa-whatsapp mr-2"></i>
+                                    Connect on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form id="contactForm" class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-secondary font-semibold mb-2">Name *</label>
+                                <input type="text" name="data[Name]" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                            </div>
+                            <div>
+                                <label class="block text-secondary font-semibold mb-2">Phone *</label>
+                                <input type="tel" name="data[Phone]" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-secondary font-semibold mb-2">Email *</label>
+                            <input type="email" name="data[Email]" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-secondary font-semibold mb-2">Service Required *</label>
+                            <select name="data[Service]" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                                <option value="">Select Service</option>
+                                <option value="Epoxy Flooring">Epoxy Flooring</option>
+                                <option value="Electrical">Electrical Services</option>
+                                <option value="Plumbing">Plumbing Services</option>
+                                <option value="Boiler Services">Boiler Services</option>
+                                <option value="Property Services">Property Services</option>
+                                <option value="Aluminum Work">Aluminum Work</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-secondary font-semibold mb-2">Project Details</label>
+                            <textarea name="data[Message]" rows="4" 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" 
+                                      placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary text-secondary px-8 py-4 rounded-lg font-bold text-lg btn-hover transition-all duration-300 hover:bg-accent">
+                            Get Free Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="Images/logo.png" alt="Sungroups Logo" class="h-10 w-10 rounded-full object-cover">
+                        <span class="text-xl font-bold">Sungroups</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Professional contracting services you can trust. Quality workmanship, reliable service, and customer satisfaction guaranteed.
+                    </p>
+                    
+                    <!-- Social Media -->
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary hover:bg-accent transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sungroupscontractor/?hl=en" target="_blank" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary hover:bg-accent transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sun-groups-296309364/" target="_blank" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary hover:bg-accent transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCMkBm3bIzhxzbv2U7A7FPUg" target="_blank" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary hover:bg-accent transition-colors duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Epoxy Flooring</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Electrical Services</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Plumbing Services</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Boiler Services</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Property Services</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Aluminum Work</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors duration-300">About</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Contact</a></li>
+                        <li><a href="help.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Help</a></li>
+                        <li><a href="rating.html" class="text-gray-300 hover:text-primary transition-colors duration-300">Rate Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center text-gray-300">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            +91 9569678499
+                        </p>
+                        <p class="flex items-center text-gray-300">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            sungroupshelp@gmail.com
+                        </p>
+                        <p class="flex items-start text-gray-300">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            Kauriya Kalan, Adalhat, Chunar, Mirzapur
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Sungroups. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

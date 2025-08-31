@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Our Service - Sun Team</title>
+    <meta name="keywords" content="Sungroups reviews, Sungroups ratings, rate Sungroups, customer reviews Sungroups, customer feedback Sungroups, testimonials Sungroups, epoxy flooring review, epoxy coating review, epoxy contractor review, metallic epoxy review, marble epoxy review, 3D epoxy review, electrical contractor review, electrical service review, electrical installation review, plumbing contractor review, plumbing service review, plumbing repair review, boiler contractor review, boiler service review, boiler repair review, aluminum contractor review, aluminum service review, aluminum fabrication review, property services review, property maintenance review, property contractor review, CCTV installation review, CCTV contractor review, CCTV service review, CCTV maintenance review, pest control review, exterminator service review, pest management review, facility management review, industrial contractor review, commercial contractor review, residential contractor review, renovation contractor review, waterproofing contractor review, epoxy flooring customer feedback, epoxy flooring customer satisfaction, epoxy flooring trusted review, epoxy flooring local review, epoxy flooring Mirzapur review, epoxy flooring Chunar review, epoxy flooring Varanasi review, epoxy flooring Prayagraj review, epoxy flooring Uttar Pradesh review, epoxy flooring near me review, epoxy flooring best review, epoxy flooring top review, epoxy flooring Google reviews, epoxy flooring professional review, epoxy flooring quality review, epoxy flooring trusted rating, epoxy flooring verified feedback, epoxy flooring honest customer review, epoxy flooring free feedback, epoxy flooring best contractor review, epoxy flooring affordable review, epoxy flooring reliable review, epoxy flooring expert review, epoxy flooring team review, epoxy flooring AMC review, epoxy flooring maintenance review, epoxy flooring installation review, epoxy flooring project review, epoxy flooring commercial review, epoxy flooring industrial review, epoxy flooring residential review, epoxy flooring near me rating, epoxy flooring customer testimonial, epoxy flooring star rating, epoxy flooring top contractor feedback, epoxy flooring brand review, epoxy flooring quality contractor feedback, epoxy flooring trusted company review, epoxy flooring satisfaction review, epoxy flooring verified customer feedback, epoxy flooring ISO certified review, epoxy flooring licensed contractor review, epoxy flooring professional team review, epoxy flooring trusted service review, epoxy flooring guaranteed service review, epoxy flooring emergency repair review, epoxy flooring local trusted review, epoxy flooring local customer rating, epoxy flooring feedback Mirzapur, epoxy flooring feedback Chunar, epoxy flooring feedback Varanasi, epoxy flooring feedback Prayagraj, epoxy flooring feedback Uttar Pradesh, trusted contractor rating, top contractor rating, best contractor rating, verified contractor feedback, honest contractor feedback, Google reviews Sungroups, customer satisfaction Sungroups, top rated Sungroups, trusted rated Sungroups, Sungroups quality reviews, Sungroups verified testimonials">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+     <link rel="canonical" href="https://sungroups.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .rating-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+        }
+        
+        .rating-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2575fc;
+            font-size: 1.8rem;
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-direction: row-reverse;
+        }
+        
+        .rating-stars input {
+            display: none;
+        }
+        
+        .rating-stars label {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .rating-stars label:before {
+            content: '\f005';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 40px;
+            color: #ddd;
+            font-weight: 900;
+            transition: color 0.3s;
+        }
+        
+        .rating-stars label:hover:before,
+        .rating-stars label:hover ~ label:before,
+        .rating-stars input:checked ~ label:before {
+            color: #ffc107;
+        }
+        
+        .rating-stars input:checked + label:before {
+            color: #ffc107;
+        }
+        
+        .rating-text {
+            text-align: center;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #2575fc;
+            min-height: 24px;
+        }
+        
+        .feedback-form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        .form-group .required {
+            color: #dc3545;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #2575fc;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .submit-btn:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: popIn 0.5s;
+        }
+        
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .modal-content i {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+        
+        .modal-content p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        
+        .modal-btn {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .back-home a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .back-home a i {
+            margin-right: 8px;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error input,
+        .form-group.error textarea,
+        .form-group.error select {
+            border-color: #dc3545;
+        }
+        
+        .form-group.error .error-message {
+            display: block;
+        }
+        
+        .success-message {
+            color: #28a745;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #2575fc;
+        }
+        
+        .instructions h3 {
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .instructions code {
+            background: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            background: white;
+            padding: 3px;
+        }
+        
+        .footer-logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #2575fc;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #2575fc;
+        }
+        
+        .footer-section p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-section p i {
+            /* margin-right: 10px; */
+            color: #2575fc;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                margin-bottom: 40px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Sungroupscontractor Services",
+  "image": "https://sungroups.com/Images/review.jpg",
+  "logo": "https://sungroups.com/Images/logo.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ravi Sharma" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "Excellent epoxy flooring and electrical work, highly recommended."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Priya Verma" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.8" },
+      "reviewBody": "Professional plumbing and CCTV installation services across India."
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thank You By Sun Team</h1>
+            <p>We value your feedback. Please rate your experience with our services.</p>
+        </header>
+        
+        <div class="rating-container">
+            <h2 class="rating-title">How would you rate our service?</h2>
+            
+            <form id="ratingForm" class="feedback-form">
+                <div class="form-group" id="ratingGroup">
+                    <label>Rating <span class="required">*</span></label>
+                    <div class="rating-stars">
+                        <input type="radio" id="star5" name="rating" value="5" />
+                        <label for="star5" title="Excellent"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="Very Good"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="Good"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="Fair"></label>
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="Poor"></label>
+                    </div>
+                    <div class="rating-text" id="ratingText"></div>
+                    <div class="error-message" id="ratingError">Please select a rating</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error-message" id="nameError">Please enter your name (at least 2 characters)</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    <div class="success-message" id="emailSuccess">Email format is valid</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Type <span class="required">*</span></label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="epoxy-flooring">Epoxy Flooring</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="boiler-services">Property Services</option>
+                        <option value="boiler-services">Boiler Services</option>
+                        <option value="aluminum-work">Aluminum Work</option>
+                        <option value="camera-installation">CCTV Installation</option>
+                        <option value="exterminator">Exterminator Services</option>
+                        <option value="general-services">All types Services</option>
+                    </select>
+                    <div class="error-message" id="serviceError">Please select a service type</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Your Feedback</label>
+                    <textarea id="comments" name="comments" placeholder="Please share your experience with us..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">Submit Rating</span>
+                </button>
+            </form>
+            
+            <div class="back-home">
+                <a href="index.html" class="text-primary hover:text-accent font-semibold inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thank You!</h2>
+            <p>Thank you for providing your rating. We appreciate your feedback!</p>
+            <a href="index.html" class="modal-btn">Back to Home</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        
+                        <img src="Images/logo.png"
+                alt="Sg logo" 
+                class="circle-img" id="logo"/>
+                        <span>Sungroups...</span>
+                    </div>
+                    <p>Professional contracting services you can trust. Quality workmanship, reliable service, and customer satisfaction guaranteed.</p>
+               
+
+                <!-- Social Media Section Added Here -->
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com" class="social-icon twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com" class="social-icon linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://youtube.com" class="social-icon youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>  
+                    </div>
+
+
+
+
+
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#epoxy-flooring">Epoxy Flooring</a></li>
+                        <li><a href="services.html#electrical">Electrical</a></li>
+                        <li><a href="services.html#plumbing">Plumbing</a></li>
+                        
+                        <li><a href="services.html#plumbing">Property Services</a></li>
+                        <li><a href="services.html#boiler-services">Boiler Services</a></li>
+                        <li><a href="services.html#aluminum-work">Aluminum Work</a></li>
+                        <li><a href="services.html#camera-installation">CCTV Installation</a></li>
+                        <li><a href="services.html#exterminator">Apply for work</a></li>
+                        <li><a href="services.html#exterminator">Exterminator Services</a></li>
+                        <li><a href="services.html#general-services">All types Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +91 9569678499</p>
+                    <p><i class="fas fa-envelope"></i> sungroupshelp@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kauriya kalan,Adalhat,Chunar,Mirzapur</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sungroups. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>     
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('ratingForm');
+            const modal = document.getElementById('thankYouModal');
+            const ratingInputs = document.querySelectorAll('input[name="rating"]');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const serviceInput = document.getElementById('service');
+            const ratingText = document.getElementById('ratingText');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            
+            // Rating descriptions
+            const ratingDescriptions = {
+                1: "Poor - We're sorry to hear about your experience",
+                2: "Fair - We'll work to improve",
+                3: "Good - Thank you for your feedback",
+                4: "Very Good - We're glad you had a good experience",
+                5: "Excellent - We're thrilled you're happy with our service!"
+            };
+            
+            // Update rating text when a star is selected
+            ratingInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    validateRating();
+                    ratingText.textContent = ratingDescriptions[this.value];
+                });
+            });
+            
+            // Validation functions
+            function validateRating() {
+                const ratingSelected = document.querySelector('input[name="rating"]:checked');
+                const ratingGroup = document.getElementById('ratingGroup');
+                const ratingError = document.getElementById('ratingError');
+                
+                if (!ratingSelected) {
+                    ratingGroup.classList.add('error');
+                    ratingError.textContent = 'Please select a rating';
+                    return false;
+                } else {
+                    ratingGroup.classList.remove('error');
+                    return true;
+                }
+            }
+            
+            function validateName() {
+                const nameError = document.getElementById('nameError');
+                
+                if (!nameInput.value || nameInput.value.length < 2) {
+                    nameInput.parentElement.classList.add('error');
+                    nameError.textContent = 'Please enter your name (at least 2 characters)';
+                    return false;
+                } else {
+                    nameInput.parentElement.classList.remove('error');
+                    return true;
+                }
+            }
+            
+            function validateEmail() {
+                const emailError = document.getElementById('emailError');
+                const emailSuccess = document.getElementById('emailSuccess');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailInput.value) {
+                    emailInput.parentElement.classList.add('error');
+                    emailError.textContent = 'Please enter your email address';
+                    emailError.style.display = 'block';
+                    emailSuccess.style.display = 'none';
+                    return false;
+                } else if (!emailRegex.test(emailInput.value)) {
+                    emailInput.parentElement.classList.add('error');
+                    emailError.textContent = 'Please enter a valid email address';
+                    emailError.style.display = 'block';
+                    emailSuccess.style.display = 'none';
+                    return false;
+                } else {
+                    emailInput.parentElement.classList.remove('error');
+                    emailError.style.display = 'none';
+                    emailSuccess.style.display = 'block';
+                    return true;
+                }
+            }
+            
+            function validateService() {
+                const serviceError = document.getElementById('serviceError');
+                
+                if (!serviceInput.value) {
+                    serviceInput.parentElement.classList.add('error');
+                    serviceError.textContent = 'Please select a service type';
+                    return false;
+                } else {
+                    serviceInput.parentElement.classList.remove('error');
+                    return true;
+                }
+            }
+            
+            // Add event listeners for validation
+            ratingInputs.forEach(input => {
+                input.addEventListener('change', validateRating);
+            });
+            
+            nameInput.addEventListener('input', validateName);
+            nameInput.addEventListener('blur', validateName);
+            
+            emailInput.addEventListener('input', validateEmail);
+            emailInput.addEventListener('blur', validateEmail);
+            
+            serviceInput.addEventListener('change', validateService);
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isRatingValid = validateRating();
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isServiceValid = validateService();
+                
+                if (!isRatingValid || !isNameValid || !isEmailValid || !isServiceValid) {
+                    // Scroll to the first error
+                    const firstError = document.querySelector('.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+                
+                // Disable submit button and show loading state
+                submitBtn.disabled = true;
+                btnText.innerHTML = '<div class="loading"></div> Submitting...';
+                
+                // Get form values
+                const rating = document.querySelector('input[name="rating"]:checked').value;
+                const name = nameInput.value;
+                const email = emailInput.value;
+                const service = serviceInput.value;
+                const comments = document.getElementById('comments').value || 'Not provided';
+                
+                // Send data to Google Sheets
+                sendDataToGoogleSheets(rating, name, email, service, comments);
+            });
+            
+            // Close modal if clicked outside
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Function to send data to Google Sheets
+            function sendDataToGoogleSheets(rating, name, email, service, comments) {
+                // Replace with your actual Google Sheets URL
+                const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+                
+                // Create a form data object
+                const formData = new FormData();
+                formData.append('rating', rating);
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('service', service);
+                formData.append('comments', comments);
+                formData.append('timestamp', new Date().toISOString());
+                
+                // Send data to Google Sheets
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show thank you modal
+                        modal.style.display = 'flex';
+                        
+                        // Reset form
+                        form.reset();
+                        ratingText.textContent = '';
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('There was an error submitting your feedback. Please try again.');
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Submit Rating';
+                });
+                
+                // For demo purposes, we'll just log the data
+                console.log('Data to be sent to Google Sheets:');
+                console.log('Rating:', rating);
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Service:', service);
+                console.log('Comments:', comments);
+            }
+        });
+    </script>
+</body>
+</html>
